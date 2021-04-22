@@ -1,0 +1,22 @@
+.error p{
+    font-size: 18px;
+    text-align: center;
+    padding: 2px 0 0 0;
+    animation: errorcolor  1.2s infinite ease-in-out;
+    
+}
+
+@keyframes errorcolor{
+    0%{
+        color:red;
+    }
+    50%{
+        color:#ff9d00;
+    }
+    70%{
+        color:#ffffff;
+    }
+    100%{
+        color: red;
+    }
+}

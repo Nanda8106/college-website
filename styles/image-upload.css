@@ -1,0 +1,287 @@
+
+.uplaoad-reload-img {
+    position: relative;
+}
+
+
+.upload {
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    padding: 0 3px 0 3px;
+}
+
+.remove-img {
+    position: relative;
+    top: -25px;
+    right: -15px;
+
+    display: none;
+}
+.remove-img span{
+    color: red;
+    font-size: 15px;
+}
+
+
+.remove-img i {
+    font-size: 25px;
+
+}
+
+.upload i {
+    font-size: 25px;
+    color: #ff0482;
+}
+
+.upload input {
+    display: none;
+}
+
+.upload i:hover {
+    color: #4b9ced;
+    cursor: pointer;
+}
+
+.remove-img span:hover {
+    color: #c64a4a;
+    cursor: pointer;
+}
+
+
+
+@media(max-width: 1300px) {
+    .Uplaoad-reload-img {
+        position: relative;
+        
+    }
+
+
+    .Upload {
+        position: absolute;;
+        top: -60px;
+        right: 30px;
+        padding: 0 3px 0 3px
+    }
+
+    .Remove-img {
+        position: relative;
+        top: -15px;
+        right: -5px;
+        display: none;
+    }
+    .Remove-img span{
+        font-size: 15px;
+        color: red;
+    }
+
+    .Remove-img i {
+        font-size: 25px;
+
+    }
+
+    .Upload i {
+        font-size: 25px;
+        color: #ff049e;
+    }
+
+    .Upload input {
+        display: none;
+    }
+
+    .Upload i:hover {
+        color: #4b9ced;
+        cursor: pointer;
+    }
+    .Remove-img span:hover {
+        color: #c64a4a;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 620px) {
+
+    .Upload {
+        position: absolute;
+        top: 45px;
+        left: 170px;
+    }
+    .Remove-img{
+        position: relative;
+        top: 60px;
+        left: 150px
+    }
+    .Remove-img span{
+        color: red;
+        font-size: 12px;
+    }
+    .Remove-img i {
+        font-size: 15px;
+        
+    }
+
+    .Upload i {
+        font-size: 15px;
+        color: #ff04a8;
+    }
+}
+
+.popup-card{
+    width: 30%;
+    height: 250px;
+    margin: 200px auto;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    left: 35%;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 0px 100px #0481ff;
+}
+.upload-img{
+    width: 100%;
+}
+.upload-img form{
+    padding: 9% 20% ;
+}
+.upload-img form label{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+}
+.upload-img form input[type="file"]{
+    margin: 20px 0;
+    font-size: 20px;
+    font-family: 'Philosopher', sans-serif;
+    color: #4b9ced;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.upload-img .upimg, .updtcancel .cancel{
+    padding: 5px 15px;
+    margin: 10px 0 10px 0px;
+    font-size: 18px;
+    font-weight: 600;
+    background: orange;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    font-family:'Philosopher', sans-serif;
+}
+.upload-img .upimg:hover{
+    background: #e5a93b;
+    cursor: pointer;
+}
+.updtcancel{
+    display: flex;
+    justify-content: space-between; 
+    
+}
+.updtcancel .cancel{
+    background: red;
+    font-family:'Philosopher', sans-serif;
+}
+.updtcancel .cancel:hover{
+    background: #f55151;
+}
+
+/*--delete  ---*/
+.popup-card-delete{
+    width: 30%;
+    height: 150px;
+    margin: 200px auto;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    left: 35%;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 0px 100px red;
+    display: none;
+}
+.confirm{
+    width: 100%;
+    margin: 50px 0;
+}
+.confirm .header p{
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+.confirmation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 90px;
+}
+.yes, .no{
+    margin: 0 15px;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #0080ff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:'Philosopher', sans-serif;
+}
+.no{
+    background: red;
+}
+.yes:hover{
+    background: #2b82d8;
+}
+.no:hover{
+    background: #ff4b4b;
+}
+/*-- End of delete ---*/
+@media(max-width:1100px){
+    .popup-card{
+        width: 50%;
+        left: 28%;
+    }
+    
+}
+
+@media(max-width:800px){
+    .popup-card{
+        width: 60%;
+    }
+    /*delete*/
+    .popup-card-delete{
+        width: 40%;
+    }
+    .confirm{
+        margin: 30px 0;
+    }
+}
+
+@media(max-width:500px){
+    .popup-card{
+        width: 90%;
+        left: 5%;
+    }
+    /*delete*/
+    .popup-card-delete{
+        width: 50%;
+    }
+    .confirm{
+        margin: 25px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+

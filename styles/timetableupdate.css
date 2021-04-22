@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.edit-timetable {
+    width: 96%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.select-year {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.select-year select {
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 20px;
+    font-family: 'Philosopher', sans-serif;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
+
+.modify1, .modify2, .modify3, .modify4 {
+    width: 100%;
+    margin: 10px auto;
+    display: none;
+}
+
+.modify1 form, .modify2 form, .modify3 form, .modify4 form {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #333030;
+    background: #333030;
+    border-radius: 5px;
+}
+
+.monday, .tuesday, .wednesday, .thursday, .friday{
+    margin: 20px 0;
+}
+.monday label, .tuesday label, .wednesday label, .thursday label, .friday label{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff7600;
+    padding: 0 10px 0 0;
+    letter-spacing: 1px;
+}
+.monday input, .tuesday input, .wednesday input, .thursday input, .friday input{
+    margin: 0 5px 10px 0;
+    padding: 5px 5px;
+    border-radius: 5px;
+    outline: none;
+    background: #4e4e4e;
+    color: white;
+    font-size: 18px;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.monday input:hover, .tuesday input:hover, .wednesday input:hover, .thursday input:hover, .friday input:hover{
+    background: rgb(78, 78, 78, 0.7);
+}
+.update1, .update2, .update3, .update4{
+    margin: 20px 0; 
+}
+.Update1, .Update2, .Update3, .Update4{
+    margin: 20px 0; 
+    display: none;
+}
+.update1 .final-update1, .update2 .final-update2, .update3 .final-update3, .update4 .final-update4, .Update-table1, .Update-table2, .Update-table3, .Update-table4{
+    padding: 10px 70px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Philosopher', sans-serif;
+    background: #0093ff;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    outline: none;
+    border: none;  
+}
+
+
+.update1 .final-update1:hover, .update2 .final-update2:hover, .update3 .final-update3:hover, .update4 .final-update4:hover,  .Update-table1:hover, .Update-table2:hover, .Update-table3:hover, .Update-table4:hover{
+    background: rgb(0, 147, 255,0.8);
+    color: rgb(255, 255, 255, 0.8);
+}
+.see-table1, .see-table2, .see-table3, .see-table4 {
+    display: none;
+    margin: 0 0 40px 0;
+}
+.see-table1 p, .see-table2 p, .see-table3 p, .see-table4 p{
+
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #262626;
+}
+.see-table1 table, .see-table2 table, .see-table3 table, .see-table4 table {
+    border: 5px solid #ffa700
+}
+
+.see-table1 table tr,
+.see-table1 table td,
+.see-table2 table tr,
+.see-table2 table td,
+.see-table3 table tr,
+.see-table3 table td,
+.see-table4 table tr,
+.see-table4 table td{
+    border: 1px solid #534f4f;
+}
+
+
+
+
+
+
+
+
+
+

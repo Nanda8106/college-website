@@ -1,0 +1,27 @@
+.all-messages {
+    margin: 20px auto;
+}
+
+.all-messages td a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.heading-messages b {
+    font-size: 20px;
+    color: red;
+}
+
+.all-messages td a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.message-box-overflow {
+    overflow: auto;
+    max-width: 300px;
+    max-height: 80px;
+}
+.list-all-updates td p{
+    cursor: pointer;
+}

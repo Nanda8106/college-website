@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.schedule-container {
+    width: 100%;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.time-class {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 60px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+
+}
+
+.time p,
+.present-class p {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #123c4b;
+    padding: 20px 10px;
+    border-radius: 10px;
+
+}
+.select-year{
+    margin: 20px 0;
+}
+.select-year select{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #123c4b;
+    padding: 20px 20px;
+    border-radius: 10px;
+    outline: none;
+    z-index: 1;
+}
+
+.time p:hover,
+.present-class p:hover, .select-year select:hover {
+    background: #3c5f6c;
+}
+
+#hours {
+    color: #ff00ce;
+}
+
+#minutes {
+    color: #ffa700;
+}
+
+#seconds {
+    color: #ff2700;
+}
+
+#present_class {
+    color: #ff6c00;
+}
+
+.see-tb {
+    display: none;
+    margin: 0 0 40px 0;
+}
+
+.see-hide {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.see,
+.hide {
+    padding: 10px 20px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background: #4d4444;
+    color: white;
+}
+
+.hide {
+    background: #e61b1b;
+    display: none;
+}
+
+.see:hover {
+    background: #2a2929;
+    cursor: pointer;
+}
+
+.hide:hover {
+    background: #b93131;
+    cursor: pointer;
+}
+
+.see-tb table {
+    border: 5px solid #ffa700
+}
+
+.see-tb table tr,
+.see-tb table td {
+    border: 1px solid #534f4f;
+}
+
+/*--- About us ---*/
+.about-us {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/services.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    width: 99%;
+    height: 20%px;
+    margin: 0 auto;
+}
+
+.Foot-Header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.Foot-Header h2 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.whole-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.foot-header {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #ff3b00;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+
+.team-members ul,
+.abou-us ul,
+.social-media ul {
+    list-style: none;
+    text-align: left;
+}
+
+.team-members ul li,
+.abou-us ul li,
+.social-media ul li {
+    padding: 0 0 3px
+}
+
+.team-members ul li a,
+.abou-us ul li a,
+.social-media ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+.team-members ul li i,
+.abou-us ul li i,
+.social-media ul li i {
+    padding: 0 10px;
+}
+
+.team-members ul li a:hover,
+.abou-us ul li a:hover,
+.social-media ul li a:hover {
+    color: #cbbebe;
+    cursor: pointer;
+    transition: 0.3s;
+}

@@ -1,0 +1,93 @@
+
+body{
+    padding: 0;
+    margin: 0;
+}
+.register, .login{
+    width: 35%;
+    margin: 30px auto;
+    text-align: center;
+    background:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/main-bulding1.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    color: white;
+}
+.login{
+    margin: 150px auto;
+}
+.register form, .login form{
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+.register form div, .login form div{
+    margin: 20px 0;
+}
+
+.register form input, .login form input{
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: darkorange;
+    letter-spacing: 1px;
+    font-size: 19px;
+    font-family: 'Philosopher', sans-serif;
+    
+}
+.register form label, .login form label{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.reg, .log{
+    margin: 15px 0 ;
+    padding: 8px 50px;
+    border: none;
+    outline: none;
+    background: #2cc0f7;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0,0.8);
+}
+.reg:hover, .log:hover{
+    background: rgb(44, 192, 247, 0.9);
+    color: rgba(0, 0, 0,0.6);
+}
+.goto{
+    padding: 0 0 30px 0; 
+    font-size: 20px
+}
+.goto a{
+    text-decoration: none;
+    color: #ff8900;
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+.goto a:hover{
+    color: #eda24c;
+}
+
+
+@media(max-width:1150px){
+    .register, .login{
+        width: 40%;
+        text-align: center;
+    }
+}
+@media(max-width:990px){
+    .register, .login{
+        width: 50%;
+        text-align: center;
+    }
+}
+@media(max-width:800px){
+    .register, .login{
+        width: 85%;
+        text-align: center;
+    }
+}
