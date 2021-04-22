@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jntua..</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/image-upload.css">
+    <link rel="stylesheet" href="styles/errors.css">
+    <link rel="stylesheet" href="styles/seeallupdates.css">
+    <link rel="stylesheet" href="styles/userdetails.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Container">
+        <div class="nav-bar">
+            <div class="navbar-center">
+                <span class="logo">
+                    <img src="images/jntu-logo1.png" alt="">
+                </span>
+
+                <div class="nav-tools select-tool1">
+                    <div class="nav-text"><i class="fa fa-book"></i>Academic Section</div>
+                    <div class="information1">
+                        <div class="picture">
+                            <img src="images/academic-section.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <span>
+                                <p class="header">Academic Section</p>
+                            </span>
+                            <span><i class="fa fa-arrow-right"></i>Regular Exams</span>
+                            <span><i class="fa fa-arrow-right"></i>Supply Exams</span>
+                            <span><i class="fa fa-arrow-right"></i>College Fee</span>
+                            <span><i class="fa fa-arrow-right"></i>New Updates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-tools select-tool2">
+                    <div class="nav-text"><i class="fa fa-bed"></i>Hostel</div>
+                    <div class="information2">
+                        <div class="picture">
+                            <img src="images/hostel-image.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <span>
+                                <p class="header">Hostel</p>
+                            </span>
+                            <span><i class="fa fa-arrow-right"></i>Lepakhi</span>
+                            <span><i class="fa fa-arrow-right"></i>Ajantha</span>
+                            <span><i class="fa fa-arrow-right"></i>Ellora</span>
+                            <span><i class="fa fa-arrow-right"></i>Amaravathi</span>
+                            <span><i class="fa fa-arrow-right"></i>Shilpa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-tools select-tool3">
+                    <div class="nav-text"><i class="fa fa-home"></i>Cse Department</div>
+                    <div class="information3">
+                        <div class="picture">
+                            <img src="images/cse-image.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <span>
+                                <p class="header">Cse Department</p>
+                            </span>
+                            <span><a href="schedule.php"><i class="fa fa-arrow-right"></i>Class Shedule</a></span>
+                            <span><a href="attendance.php"><i class="fa fa-arrow-right"></i>Attandance</a></span>
+                            <span><a href="table.php"></a><i class="fa fa-arrow-right"></i>Lecturers</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-tools select-tool4">
+                    <div class="nav-text"><i class="fa fa-pencil-square-o"></i>New Updates</div>
+                    <div class="information4">
+                        <div class="picture">
+                            <img src="images/new-update.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <span>
+                                <p class="header1">No Updates Yet</p>
+                            </span>
+                            <!--<span><i class="fa fa-arrow-right"></i>Lepakhi</span>
+                            <span><i class="fa fa-arrow-right"></i>Ajantha</span>
+                            <span><i class="fa fa-arrow-right"></i>Ellora</span>
+                            <span><i class="fa fa-arrow-right"></i>Amaravathi</span>
+                            <span><i class="fa fa-arrow-right"></i>Shilpa</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <span class="nav-tools"><i class="fa fa-phone"></i>Contact Us</span>
+
+                <span class="search-center">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+                    <div class="search-btn">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="SearchHere">
+                        <ul id="myKeywords">
+                            <li><a href="#">Attendance</a></li>
+                            <li><a href="#">Login</a></li>
+
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">Schedule</a></li>
+
+                            <li><a href="#">New updates</a></li>
+                            
+                        </ul>
+                        <p class="noans" style="display:none">No result</p>
+                    </div>
+                        <script src="js/search.js"></script>
+                    
+                </span>
+
+                <div class="nav-tools select-tool5">
+                    <div class="nav-text1 profile">
+                        <img src="images/blank-user.webp" alt="">
+                    </div>
+                    <div class="information5">
+                        <div class="picture">
+                            <img src="images/blank-user.webp" alt="">
+                            <div class="uplaoad-reload-img">
+                                <div class="remove-img">
+                                    <span id="goto_deletecard"><i class="fa fa-trash-o" title="Rmove image"></i>Delete image</span>
+                                </div>
+                                <div class="upload">
+
+                                    <span id="goto_uploadcard"><i class="fa fa-camera" title="Upload image"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <?php  if (isset($_SESSION['username'])) : ?>
+                            <span>
+                                <p class="header"><?php echo $_SESSION['username']; ?></p>
+                            </span>
+                            <?php else : ?>
+                            <span>
+                                <p class="header">User</p>
+                                <?php endif ?>
+                            </span>
+                            <span><i class="fa fa-arrow-right"></i>Settings</span>
+                            <span><i class="fa fa-arrow-right"></i>Your actions</span>
+                            <?php  if (isset($_SESSION['username'])) : ?>
+                            <span><a href="index.php?logout='1'"><i class="fa fa-user-times"></i>Logout</a></span>
+                            <?php else: ?>
+                            <span><a href="login.php"><i class="fa fa-user-times"></i>Login</a></span>
+                            <?php endif ?>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--dgt-->
+                <div class="menubar2">
+                    <input type="checkbox" id="check">
+                    <label for="check">
+                        <i class="fa fa-bars" id="btn"></i>
+                        <i class="fa fa-times" id="cancel"></i>
+                    </label>
+
+                    <span class="sidebar">
+                        <div class="Nav-tool Select-tool1">
+                            <div><i class="fa fa-book"></i>Academic Section</div>
+                            <div class="Information1">
+                                <div class="Picture">
+                                    <img src="images/academic-section.jpg" alt="">
+                                </div>
+                                <div class="Details">
+                                    <span>
+                                        <p class="Header">Academic Section</p>
+                                    </span>
+                                    <span><i class="fa fa-arrow-right"></i>Regular Exams</span>
+                                    <span><i class="fa fa-arrow-right"></i>Supply Exams</span>
+                                    <span><i class="fa fa-arrow-right"></i>College Fee</span>
+                                    <span><i class="fa fa-arrow-right"></i>New Updates</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Nav-tool Select-tool2">
+                            <div><i class="fa fa-bed"></i>Hostel</div>
+                            <div class="Information2">
+                                <div class="Picture">
+                                    <img src="images/hostel-image.jpg" alt="">
+                                </div>
+                                <div class="Details">
+                                    <span>
+                                        <p class="Header">Hostel</p>
+                                    </span>
+                                    <span><i class="fa fa-arrow-right"></i>Lepakhi</span>
+                                    <span><i class="fa fa-arrow-right"></i>Ajantha</span>
+                                    <span><i class="fa fa-arrow-right"></i>Ellora</span>
+                                    <span><i class="fa fa-arrow-right"></i>Amaravathi</span>
+                                    <span><i class="fa fa-arrow-right"></i>Shilpa</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="Nav-tool Select-tool3">
+                            <div><i class="fa fa-home"></i>Cse Department</div>
+
+                            <div class="Information3">
+                                <div class="Picture">
+                                    <img src="images/cse-image.jpg" alt="">
+                                </div>
+                                <div class="Details">
+                                    <span>
+                                        <p class="Header">Cse Department</p>
+                                    </span>
+                                    <span><a href="schedule.php"><i class="fa fa-arrow-right"></i>Class Shedule</a></span>
+                                    <span><a href="attendance.php"><i class="fa fa-arrow-right"></i>Atandance</a></span>
+                                    <span><a href="table.php"><i class="fa fa-arrow-right"></i>Lecturers</a></span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Nav-tool Select-tool4">
+                            <div><i class="fa fa-pencil-square-o"></i>New Updates</div>
+
+                            <div class="Information4">
+                                <div class="Picture">
+                                    <img src="images/new-update.jpg" alt="">
+                                </div>
+                                <div class="Details">
+                                    <span>
+                                        <p class="Header1">No Updates Yet</p>
+                                    </span>
+                                    <!--<span><i class="fa fa-arrow-right"></i>Lepakhi</span>
+                                    <span><i class="fa fa-arrow-right"></i>Ajantha</span>
+                                    <span><i class="fa fa-arrow-right"></i>Ellora</span>
+                                    <span><i class="fa fa-arrow-right"></i>Amaravathi</span>
+                                    <span><i class="fa fa-arrow-right"></i>Shilpa</span>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Nav-tool Select-tool4">
+                            <div><i class="fa fa-phone"></i>Contact Us</div>
+                        </div>
+
+                        <div class="Nav-tool Select-tool5">
+                            <div class="Profile"><img src="images/blank-user.webp" alt=""></div>
+                            <div class="Information5">
+                                <div class="Picture">
+                                    <img src="images/blank-user.webp" alt="">
+                                    <div class="Uplaoad-reload-img">
+                                        <div class="Remove-img">
+                                            <span id="Goto_deletecard"><i class="fa fa-trash-o" title="Delete image"></i>Delete image</span>
+                                        </div>
+                                        <div class="Upload">
+
+
+                                            <span id="Goto_uploadcard"><i class="fa fa-camera" title="upload image"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Details">
+                                    <?php  if (isset($_SESSION['username'])) : ?>
+                                    <span>
+                                        <p class="Header"><?php echo $_SESSION['username']; ?></p>
+                                    </span>
+                                    <?php else : ?>
+                                    <span>
+                                        <p class="Header">User</p>
+                                        <?php endif ?>
+                                    </span>
+                                    <span><i class="fa fa-arrow-right"></i>Settings</span>
+                                    <span><i class="fa fa-arrow-right"></i>Your actions</span>
+                                    <?php  if (isset($_SESSION['username'])) : ?>
+                                    <span><a href="index.php?logout='1'"><i class="fa fa-user-times"></i>Logout</a></span>
+                                    <?php else: ?>
+                                    <span><a href="login.php"><i class="fa fa-user-times"></i>Login</a></span>
+                                    <?php endif ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <span class="Nav-tool"><a href="login.php"><i class="fa fa-user"></i>Login/Register</a></span>-->
+
+
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="update-container">
+            <table border="" cellspacing="0" align="center" class="all-messages">
+                        <!--<caption>Timetable</caption>-->
+                        <tr class="heading-messages">
+                            <td align="center" height="40" width="50">
+                                <b>S.no</b>
+                            </td>
+                            <td align="center" height="40" width="100">
+                                <b>Date</b>
+                            </td>
+                            <td align="center" height="40" width="100">
+                                <b>Time</b>
+                            </td>
+                            <td align="center" height="40" width="300">
+                                <b>Message</b>
+                            </td>
+                            <td align="center" height="40" width="100">
+                                <b>From</b>
+                            </td>
+                            <td align="center" height="40" width="100">
+                                <b>To</b>
+                            </td>
+                            <td align="center" height="40" width="100">
+                                <b>Delete</b>
+                            </td>
+                            
+                        </tr>
+
+                        <tr class="list-all-updates">
+                            <td align="center" height="50" title="Serial No">
+                                <p>1</p>
+                            </td>
+                            <td align="center" height="50" title="In which date message sent">
+                                <p>20/04/2020</p>
+                            </td>
+                            <td align="center" height="50" title="At which time message sent">
+                                <p>7.40 PM</p>
+                            </td>
+                            <td height="50" title="Message">
+                               <div class="message-box-overflow">
+                                <p>This is to inform all that is come to college This is to inform all that is come to college This is to inform all that is come to college This is to inform all that is come to college This is to inform all that is come to college</p>
+                                    
+                                </div>
+                            </td>
+                            <td align="center" height="50" title="Who send this message">
+                                <p>Suresh</p>
+                            </td>
+                            <td align="center" height="50" title="To all stidents">
+                                <p>All</p>
+                            </td>
+                            <td align="center" height="50" title="Delete message">
+                                <a href="">Delete</a>
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                        <tr class="list-all-updates">
+                            <td align="center" height="50" title="Serial No">
+                                <p>1</p>
+                            </td>
+                            <td align="center" height="50" title="In which date message sent">
+                                <p>20/04/2020</p>
+                            </td>
+                            <td align="center" height="50" title="At which time message sent">
+                                <p>7.40 PM</p>
+                            </td>
+                            <td height="50" title="Message">
+                               <div class="message-box-overflow">
+                                <p>This is to inform all that is come to college </p>
+                                    
+                                </div>
+                            </td>
+                            <td align="center" height="50" title="Who send this message">
+                                <p>Suresh</p>
+                            </td>
+                            <td align="center" height="50" title="Student admission no">
+                                <p>18001A0574</p>
+                            </td>
+                            <td align="center" height="50" title="Delete message">
+                                <a href="">Delete</a>
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                        <tr class="list-all-updates">
+                            <td align="center" height="50" title="Serial No">
+                                <p>1</p>
+                            </td>
+                            <td align="center" height="50" title="In which date message sent">
+                                <p>20/04/2020</p>
+                            </td>
+                            <td align="center" height="50" title="At which time message sent">
+                                <p>7.40 PM</p>
+                            </td>
+                            <td height="50" title="Message">
+                               <div class="message-box-overflow">
+                                <p>This is to inform all that is come to college</p>
+                                    
+                                </div>
+                            </td>
+                            <td align="center" height="50" title="Who send this message">
+                                <p>Suresh</p>
+                            </td>
+                            <td align="center" height="50" title="Student admission no">
+                                <p>18001A0574</p>
+                            </td>
+                            <td align="center" height="50" title="Delete message">
+                                <a href="">Delete</a>
+                            </td>
+                            
+                            
+                        </tr>
+            </table>
+        </div>
+        <!--End of Updates for all-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,452 @@
+
+
+
+
+
+
+
+
+/*$query = 'SELECT * FROM year1';
+
+$result = mysqli_query($conn,$query);
+
+$students = mysqli_fetch_all($result,MYSQLI_ASSOC);
+ echo json_encode($students);*/
+
+
+
+/*	$query = "UPDATE `year` SET `period1`=[$first],`period2`=[$second],`period3`=[$three],`period4`=[$four],`period5`=[$five],`period6`=[$six],`period7`=[$seven] WHERE 1";
+  */
+  
+  
+  
+  <?php
+session_start();
+
+// initializing variables
+
+
+// connect to the database
+$db = mysqli_connect('localhost', 'root', '', 'college');
+
+// REGISTER USER
+if (isset($_POST['reg_user'])) {
+  // receive all input values from the form
+  $first = mysqli_real_escape_string($db, $_POST['Period1']);
+  $second = mysqli_real_escape_string($db, $_POST['Period2']);
+  $three = mysqli_real_escape_string($db, $_POST['Period3']);
+  $four = mysqli_real_escape_string($db, $_POST['Period4']);
+  $five = mysqli_real_escape_string($db, $_POST['Period5']);
+  $six = mysqli_real_escape_string($db, $_POST['Period6']);
+  $seven = mysqli_real_escape_string($db, $_POST['Period7']);
+
+  
+    $query_delete = "DELETE FROM `year` WHERE 1";
+    mysqli_query($db, $query_delete);
+  	
+    
+    $query = "INSERT INTO year (period1, period2, period3,period4,period5,period6,period7) 
+  			  VALUES('$first', '$second', '$three','$four', '$five', '$six', '$seven')";
+  	mysqli_query($db, $query);
+ 
+  	header('location: practice.php');
+  
+}
+
+
+
+
+
+$query = "INSERT INTO year1( period11, period12, period13, period14, period15, period16, period17, period21, period22, period23, period24, period25, period26, period27, period31, period32, period33, period34, period35, period36, period37, period41, period42, period43, period44, period45, `period46, period47`, period51, period52, period53, period54, period55, period56,period57) VALUES ('$oneone','$onetwo','$onethree','$onefour','$onefive','$onesix','$oneseven','$twoone','$twotwo','$twothree','$twofour','$twofive','$twosix','$twoseven','$threeone','$threetwo','$threethree','$threefour','$threefive','$threesix','$threeseven','$fourone','$fourtwo','$fourthree','$fourfour','$fourfive','$foursix','$fourseven','$fiveone','$fivetwo','$fivethree','$fivefour','$fivefive','$fivesix','$fiveseven')";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+
+session_start();
+
+
+$db = mysqli_connect('localhost', 'root','','jntua');
+
+if(isset($_POST['update_schedule'])){
+    $one = mysqli_real_escape_string($db, $_POST['period11']);
+    $two = mysqli_real_escape_string($db, $_POST['period12']);
+    $three = mysqli_real_escape_string($db, $_POST['period13']);
+    $four = mysqli_real_escape_string($db, $_POST['period14']);
+    $five = mysqli_real_escape_string($db, $_POST['period15']);
+    $six = mysqli_real_escape_string($db, $_POST['period16']);
+    $seven = mysqli_real_escape_string($db, $_POST['period17']);
+    
+    $eight = mysqli_real_escape_string($db, $_POST['period21']);
+    $nine = mysqli_real_escape_string($db, $_POST['period22']);
+    $ten = mysqli_real_escape_string($db, $_POST['period23']);
+    $eleven = mysqli_real_escape_string($db, $_POST['period24']);
+    $twelve = mysqli_real_escape_string($db, $_POST['period25']);
+    $thirteen = mysqli_real_escape_string($db, $_POST['period26']);
+    $fourteen = mysqli_real_escape_string($db, $_POST['period27']);
+    
+    $threeone = mysqli_real_escape_string($db, $_POST['period31']);
+    $threetwo = mysqli_real_escape_string($db, $_POST['period32']);
+    $threethree = mysqli_real_escape_string($db, $_POST['period33']);
+    $threefour = mysqli_real_escape_string($db, $_POST['period34']);
+    $threefive = mysqli_real_escape_string($db, $_POST['period35']);
+    $threesix = mysqli_real_escape_string($db, $_POST['period36']);
+    $threeseven = mysqli_real_escape_string($db, $_POST['period37']);
+    
+    $fourone = mysqli_real_escape_string($db, $_POST['period41']);
+    $fourtwo = mysqli_real_escape_string($db, $_POST['period42']);
+    $fourthree = mysqli_real_escape_string($db, $_POST['period43']);
+    $fourfour = mysqli_real_escape_string($db, $_POST['period44']);
+    $fourfive = mysqli_real_escape_string($db, $_POST['period45']);
+    $foursix = mysqli_real_escape_string($db, $_POST['period46']);
+    $fourseven = mysqli_real_escape_string($db, $_POST['period47']);
+    
+    $fiveone = mysqli_real_escape_string($db, $_POST['period51']);
+    $fivetwo = mysqli_real_escape_string($db, $_POST['period52']);
+    $fivethree = mysqli_real_escape_string($db, $_POST['period53']);
+    $fivefour = mysqli_real_escape_string($db, $_POST['period54']);
+    $fivefive = mysqli_real_escape_string($db, $_POST['period55']);
+    $fivesix = mysqli_real_escape_string($db, $_POST['period56']);
+    $fiveseven = mysqli_real_escape_string($db, $_POST['period57']);
+
+    
+    
+    
+    
+    
+  
+  	
+   
+    $query = "INSERT INTO year1 (period11, period12, period13,period14,period15,period16,period17,period21,period22,period23,period24,period25,period26,period27,period31,period32, period33, period34, period35, period36, period37, period41, period42, period43, period44, period45, period46, period47, period51, period52, period53, period54, period55, period56,period57) VALUES('$one', '$two', '$three','$four', '$five', '$six', '$seven', '$eight', '$nine', '$ten', '$eleven', '$twelve', '$thirteen', '$fourteen','$threeone', '$threetwo','$threethree','$threefour','$threefive','$threesix','$threeseven','$fourone','$fourtwo','$fourthree','$fourfour','$fourfive','$foursix','$fourseven','$fiveone','$fivetwo','$fivethree','$fivefour','$fivefive','$fivesix','$fiveseven')";
+  	mysqli_query($db, $query);
+ 
+    header('location: table.php');
+ 
+ 
+ 
+ 
+ 
+ 
+  $updte_query = "UPDATE year1 SET period11='$oneone',period12='$onetwo',period13='$onethree',period14='$onefour',period15='$onefive',period16='$onesix',period17='$oneseven',period21='$twoone',period22='$twotwo',period23='$twothree',period24='$twofour',period25='$twofive',period26='$twosix',period27='$twoseven',period31='$threeone',period32='$threetwo',period33='$threethree',period34='$threefour',period35='$threefive',period36='$threesix',period37='$threeseven',period41='$fourone',period42='$fourtwo',period43='$fourthree',period44='$fourfour',period45='$fourfive',period46='$foursix',period47='$fourseven',period51='$fiveone',period52='$fivetwo',period53='$fivethree',period54='$fivefour',period55='$fivefive',period56='$fivesix',period57`=$fiveseven' WHERE day=10";
+   
+   
+   
+   
+   
+   /*$query_delete = "DELETE FROM `year1` WHERE 1";
+    mysqli_query($db, $query_delete);
+  
+  	
+   
+    $query = "INSERT INTO year1( period11, period12, period13, period14, period15, period16, period17, period21, period22, period23, period24, period25, period26, period27, period31, period32, period33, period34, period35, period36, period37, period41, period42, period43, period44, period45, period46, period47, period51, period52, period53, period54, period55, period56,period57) VALUES ('$oneone','$onetwo','$onethree','$onefour','$onefive','$onesix','$oneseven','$twoone','$twotwo','$twothree','$twofour','$twofive','$twosix','$twoseven','$threeone','$threetwo','$threethree','$threefour','$threefive','$threesix','$threeseven','$fourone','$fourtwo','$fourthree','$fourfour','$fourfive','$foursix','$fourseven','$fiveone','$fivetwo','$fivethree','$fivefour','$fivefive','$fivesix','$fiveseven')";
+  	mysqli_query($db, $query);*/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="nav-bar">
+    <div class="navbar-center">
+        <span class="logo">
+            <img src="images/jntu-logo1.png" alt="">
+        </span>
+
+        <div class="nav-tools select-tool1">
+            <div class="nav-text"><i class="fa fa-book"></i>Academic Section</div>
+            <div class="information1">
+                <div class="picture">
+                    <img src="images/academic-section.jpg" alt="">
+                </div>
+                <div class="details">
+                    <span>
+                        <p class="header">Academic Section</p>
+                    </span>
+                    <span><i class="fa fa-arrow-right"></i>Regular Exams</span>
+                    <span><i class="fa fa-arrow-right"></i>Supply Exams</span>
+                    <span><i class="fa fa-arrow-right"></i>College Fee</span>
+                    <span><i class="fa fa-arrow-right"></i>New Updates</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-tools select-tool2">
+            <div class="nav-text"><i class="fa fa-bed"></i>Hostel</div>
+            <div class="information2">
+                <div class="picture">
+                    <img src="images/hostel-image.jpg" alt="">
+                </div>
+                <div class="details">
+                    <span>
+                        <p class="header">Hostel</p>
+                    </span>
+                    <span><i class="fa fa-arrow-right"></i>Lepakhi</span>
+                    <span><i class="fa fa-arrow-right"></i>Ajantha</span>
+                    <span><i class="fa fa-arrow-right"></i>Ellora</span>
+                    <span><i class="fa fa-arrow-right"></i>Amaravathi</span>
+                    <span><i class="fa fa-arrow-right"></i>Shilpa</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-tools select-tool3">
+            <div class="nav-text"><i class="fa fa-home"></i>Cse Department</div>
+            <div class="information3">
+                <div class="picture">
+                    <img src="images/cse-image.jpg" alt="">
+                </div>
+                <div class="details">
+                    <span>
+                        <p class="header">Cse Department</p>
+                    </span>
+                    <span><a href="schedule.php"><i class="fa fa-arrow-right"></i>Class Shedule</a></span>
+                    <span><a href="attendance.php"><i class="fa fa-arrow-right"></i>Attandance</a></span>
+                    <span><a href="table.php"></a><i class="fa fa-arrow-right"></i>Lecturers</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-tools select-tool4">
+            <div class="nav-text"><i class="fa fa-pencil-square-o"></i>New Updates</div>
+            <div class="information4">
+                <div class="picture">
+                    <img src="images/new-update.jpg" alt="">
+                </div>
+                <div class="details">
+                    <span>
+                        <p class="header1">No Updates Yet</p>
+                    </span>
+                    <!--<span><i class="fa fa-arrow-right"></i>Lepakhi</span>
+                            <span><i class="fa fa-arrow-right"></i>Ajantha</span>
+                            <span><i class="fa fa-arrow-right"></i>Ellora</span>
+                            <span><i class="fa fa-arrow-right"></i>Amaravathi</span>
+                            <span><i class="fa fa-arrow-right"></i>Shilpa</span>-->
+                </div>
+            </div>
+        </div>
+
+        <span class="nav-tools"><i class="fa fa-phone"></i>Contact Us</span>
+
+        <span class="search-center">
+            <input type="text" placeholder="Search">
+            <div class="search-btn">
+                <i class="fa fa-search"></i>
+            </div>
+        </span>
+
+        <div class="nav-tools select-tool5">
+            <div class="nav-text1 profile">
+                <img src="images/blank-user.webp" alt="">
+            </div>
+            <div class="information5">
+                <div class="picture">
+                    <img src="images/blank-user.webp" alt="">
+                    <div class="uplaoad-reload-img">
+                        <div class="remove-img">
+                            <i class="fa fa-trash-o" title="Rmove image"></i>
+                        </div>
+                        <div class="upload">
+
+                            <input type="file" id="file" name="image" accept="image/*" style="display:none">
+                            <label for="file"><i class="fa fa-camera" title="upload image"></i></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <?php  if (isset($_SESSION['username'])) : ?>
+                    <span>
+                        <p class="header"><?php echo $_SESSION['username']; ?></p>
+                    </span>
+                    <?php else : ?>
+                    <span>
+                        <p class="header">User</p>
+                        <?php endif ?>
+                    </span>
+                    <span><i class="fa fa-arrow-right"></i>Settings</span>
+                    <span><i class="fa fa-arrow-right"></i>Your actions</span>
+                    <?php  if (isset($_SESSION['username'])) : ?>
+                    <span><a href="index.php?logout='1'"><i class="fa fa-user-times"></i>Logout</a></span>
+                    <?php else: ?>
+                    <span><a href="login.php"><i class="fa fa-user-times"></i>Login</a></span>
+                    <?php endif ?>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--dgt-->
+        <div class="menubar2">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fa fa-bars" id="btn"></i>
+                <i class="fa fa-times" id="cancel"></i>
+            </label>
+
+            <span class="sidebar">
+                <div class="Nav-tool Select-tool1">
+                    <div><i class="fa fa-book"></i>Academic Section</div>
+                    <div class="Information1">
+                        <div class="Picture">
+                            <img src="images/academic-section.jpg" alt="">
+                        </div>
+                        <div class="Details">
+                            <span>
+                                <p class="Header">Academic Section</p>
+                            </span>
+                            <span><i class="fa fa-arrow-right"></i>Regular Exams</span>
+                            <span><i class="fa fa-arrow-right"></i>Supply Exams</span>
+                            <span><i class="fa fa-arrow-right"></i>College Fee</span>
+                            <span><i class="fa fa-arrow-right"></i>New Updates</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Nav-tool Select-tool2">
+                    <div><i class="fa fa-bed"></i>Hostel</div>
+                    <div class="Information2">
+                        <div class="Picture">
+                            <img src="images/hostel-image.jpg" alt="">
+                        </div>
+                        <div class="Details">
+                            <span>
+                                <p class="Header">Hostel</p>
+                            </span>
+                            <span><i class="fa fa-arrow-right"></i>Lepakhi</span>
+                            <span><i class="fa fa-arrow-right"></i>Ajantha</span>
+                            <span><i class="fa fa-arrow-right"></i>Ellora</span>
+                            <span><i class="fa fa-arrow-right"></i>Amaravathi</span>
+                            <span><i class="fa fa-arrow-right"></i>Shilpa</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="Nav-tool Select-tool3">
+                    <div><i class="fa fa-home"></i>Cse Department</div>
+
+                    <div class="Information3">
+                        <div class="Picture">
+                            <img src="images/cse-image.jpg" alt="">
+                        </div>
+                        <div class="Details">
+                            <span>
+                                <p class="Header">Cse Department</p>
+                            </span>
+                            <span><a href="schedule.php"><i class="fa fa-arrow-right"></i>Class Shedule</a></span>
+                            <span><a href="attendance.php"><i class="fa fa-arrow-right"></i>Atandance</a></span>
+                            <span><a href="table.php"><i class="fa fa-arrow-right"></i>Lecturers</a></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Nav-tool Select-tool4">
+                    <div><i class="fa fa-pencil-square-o"></i>New Updates</div>
+
+                    <div class="Information4">
+                        <div class="Picture">
+                            <img src="images/new-update.jpg" alt="">
+                        </div>
+                        <div class="Details">
+                            <span>
+                                <p class="Header1">No Updates Yet</p>
+                            </span>
+                            <!--<span><i class="fa fa-arrow-right"></i>Lepakhi</span>
+                                    <span><i class="fa fa-arrow-right"></i>Ajantha</span>
+                                    <span><i class="fa fa-arrow-right"></i>Ellora</span>
+                                    <span><i class="fa fa-arrow-right"></i>Amaravathi</span>
+                                    <span><i class="fa fa-arrow-right"></i>Shilpa</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Nav-tool Select-tool4">
+                    <div><i class="fa fa-phone"></i>Contact Us</div>
+                </div>
+
+                <div class="Nav-tool Select-tool5">
+                    <div class="Profile"><img src="images/blank-user.webp" alt=""></div>
+                    <div class="Information5">
+                        <div class="Picture">
+                            <img src="images/blank-user.webp" alt="">
+                            <div class="Uplaoad-reload-img">
+                                <div class="Remove-img">
+                                    <i class="fa fa-trash-o" title="Delete image"></i>
+                                </div>
+                                <div class="Upload">
+
+                                    <input type="file" id="file" name="image" accept="image/*">
+                                    <label for="file"><i class="fa fa-camera" title="upload image"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Details">
+                            <?php  if (isset($_SESSION['username'])) : ?>
+                            <span>
+                                <p class="header"><?php echo $_SESSION['username']; ?></p>
+                            </span>
+                            <?php else : ?>
+                            <span>
+                                <p class="Header">User</p>
+                                <?php endif ?>
+                            </span>
+                            <span><i class="fa fa-arrow-right"></i>Settings</span>
+                            <span><i class="fa fa-arrow-right"></i>Your actions</span>
+                            <?php  if (isset($_SESSION['username'])) : ?>
+                            <span><a href="index.php?logout='1'"><i class="fa fa-user-times"></i>Logout</a></span>
+                            <?php else: ?>
+                            <span><a href="login.php"><i class="fa fa-user-times"></i>Login</a></span>
+                            <?php endif ?>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <span class="Nav-tool"><a href="login.php"><i class="fa fa-user"></i>Login/Register</a></span>-->
+
+
+            </span>
+        </div>
+    </div>
+</div>
