@@ -10,4 +10,13 @@
 
 ## UI Images
 
-<img src="https://github.com/Nanda8106/college-website/edit/master/UI Images/landing page.png" style="height: 100px; width:100px;"/>
+|<img src="UI%20Images/landing%20page.png" alt="landing page" width="500"/>|<img src="UI%20Images/register%20page.png" alt="register page" width="500"/>|
+|---|---|
+|<img src="UI%20Images/login%20page.png" alt="login page" width="500"/>|<img src="UI%20Images/success%20popup.png" alt="success popup" width="500"/>|
+|---|---|
+|<img src="UI%20Images/profile%20setting%20hover.png" alt="drawing" width="500" height="230"/>|<img src="UI%20Images/updates%20hover.png" alt="drawing" width="500"/>|
+|---|---|
+|<img src="UI%20Images/updates%20sending%20overlay.png" alt="drawing" width="500"/>|<img src="UI%20Images/timetable%20page.png" alt="drawing" width="500"/>|
+|---|---|
+|<img src="UI%20Images/user%20details%20page.png" alt="drawing" width="500"/>|<img src="UI%20Images/confirmation%20popup.png" alt="drawing" width="500"/>|
+|---|---|
