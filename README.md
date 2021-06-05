@@ -10,4 +10,4 @@
 
 ## UI Images
 
-![alt text](https://drive.google.com/file/d/1dWpGe92cO6GfrZQTBAR4uznvbqoVAvxn/view?usp=sharing)
+<img src="https://github.com/Nanda8106/college-website/edit/master/UI Images/landing page.png" style="height: 100px; width:100px;"/>
