@@ -22,4 +22,8 @@
 |---|---|
 
 
+# deployment
+[deploy](https://collegedet.000webhostapp.com/index.php)
+
+
 ### Thank you 😊
